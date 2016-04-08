@@ -1,0 +1,46 @@
+@model SYCH.Models.Idea
+@{
+    ViewData["Title"] = "Details";
+}
+<center>
+    <h2>Here are your idea details</h2>
+</center>
+<div class="box1"></div>
+
+    <div>
+
+        <br />
+        
+            <dl class="dl-horizontal">
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Industry)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Industry)
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Votes)
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Votes)
+                </dd>
+            </dl>
+
+    </div>
+
+<center>
+    <p>
+        <a asp-action="Edit" asp-route-id="@Model.ID">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </p>
+
+</center>
+

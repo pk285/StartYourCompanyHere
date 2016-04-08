@@ -1,0 +1,109 @@
+@model IEnumerable<SYCH.Models.Profile>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<script runat="server">
+    Sub submit(sender As Object, e As EventArgs)
+        Reponse.Redirect("http://localhost:60135/Profiles?filter=" + filterText.Text);
+    End Sub
+</script>
+<center>
+    <h2>Find new team members</h2>
+</center>
+<div class="box1"></div>
+<br />
+<center>
+    <h4>
+        If user looking to be a part of a team, create new profile so other users can find you. Your email will only be accessible to verified users who create an account.
+
+        <a asp-action="Create">Create New Profile</a>
+    </h4>
+    <h4>If you are looking for a team member, create a profile so you can contact them</h4>
+</center>
+<center>
+
+   
+</center>
+<!--
+<form asp-controller="ProfilesController" asp-action="Search" >
+    <p>
+        Title: <input type="text" name="SearchString" value="search" id="searchString">
+        <input type="submit" value="Filter" class="btn btn-default" name="Filter" />
+       <asp:TextBox id="filterText" runat="server"  />
+        <asp:Button OnClick="submit" contextmenu="Submit" runat="server" text="Search" />
+        Html.ActionLink("Filter this shit", "Index", new { filter = "test"}) 
+    </p>
+</form>
+-->
+<!--
+using (Html.BeginForm("Search", "ProfilesController"))
+{
+    Html.TextBoxFor(m => m.Search)
+    <input type="submit" value="Search" />
+}
+    
+-->
+<table class="table">
+    <tr>  
+         <!--
+        <th>
+         
+            Html.DisplayNameFor(model => model.Email) 
+        </th>
+             -->
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PositionSeeking)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YearsExperience)
+        </th>
+               
+        <th></th>
+    </tr>
+    
+@foreach (var item in Model) {
+    
+    <tr>
+        <!--
+        <td>
+            Html.DisplayFor(modelItem => item.Email)
+        </td>
+            -->
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PositionSeeking)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YearsExperience)
+        </td>
+        <td>
+            <!--
+            <a asp-action="Edit" asp-route-id="item.Id">Edit</a> |
+                -->
+           
+@if (User.Identity.IsAuthenticated)
+{
+    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+            <a asp-action="Contact" asp-route-id="@item.Id">Contact</a>
+            
+                
+}
+else {
+    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+
+}
+
+
+        </td>
+    </tr>
+
+
+}
+</table>

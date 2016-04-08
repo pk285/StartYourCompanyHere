@@ -1,0 +1,61 @@
+@model SYCH.Models.Idea
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<center>
+    <h2>Submit an idea</h2>
+    <div class="box1"></div>
+    <h3>Have an awesome idea you want built out? Fill out this form here!</h3>
+    <h4>Don't want your idea made public, but still want someone else to build it? 
+    Send your idea to SYCH@gmail.com follow this format:</h4>
+</center>
+
+
+<form asp-action="Create">
+    <div class="form-horizontal">
+
+        <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Description" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger" />
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <label asp-for="Industry" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Industry" class="form-control" />
+                <span asp-validation-for="Industry" class="text-danger" />
+            </div>
+        </div>
+
+      
+        
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+            
+    </div>
+</form>
+
+
+
+<center>
+    <p>
+        <a asp-action="Index">Back to List</a>
+    </p>
+
+</center>
+
+@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

@@ -1,0 +1,82 @@
+@model IEnumerable<SYCH.Models.Idea>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<center>
+    <h1>Vote on startup ideas!</h1>
+    <div class="box1"></div>
+    <h3>It's time for you guys to decide what's the best website idea</h3>
+</center>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel panel-default">
+               
+                <div class="panel-body">
+                    Want to submit an idea and have someone else build it?<center> <a asp-action="Create">Submit Idea</a></center>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+               
+                <div class="panel-body">
+                    If you are interested in building one of these ideas, please contact us at sych@gmail.com with the project ID
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+             
+                <div class="panel-body">
+                   Check out our premium page, where we can help you build and patent the idea! 
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ID)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Description)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Industry)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Votes)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Description)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Industry)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Votes)
+                        </td>
+                        <td>
+                            <!--
+                            <a asp-action="Edit" asp-route-id="item.ID">Edit</a> | -->
+                            <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                            <!--
+                            <a asp-action="Delete" asp-route-id="@item.ID">Delete</a> |
+                               -->
+                            <a asp-action="Vote" asp-route-id="@item.ID">Vote</a>
+
+                        </td>
+                    </tr>
+                }
+            </table>

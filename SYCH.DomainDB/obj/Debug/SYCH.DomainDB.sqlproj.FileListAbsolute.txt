@@ -1,0 +1,5 @@
+C:\Users\prahasi\documents\visual studio 2015\Projects\SYCH\SYCH.DomainDB\bin\Debug\SYCH.DomainDB.dacpac
+C:\Users\prahasi\documents\visual studio 2015\Projects\SYCH\SYCH.DomainDB\bin\Debug\SYCH.DomainDB.dll
+C:\Users\prahasi\documents\visual studio 2015\Projects\SYCH\SYCH.DomainDB\bin\Debug\SYCH.DomainDB.pdb
+C:\Users\prahasi\documents\visual studio 2015\Projects\SYCH\SYCH.DomainDB\obj\Debug\SYCH.DomainDB.dll
+C:\Users\prahasi\documents\visual studio 2015\Projects\SYCH\SYCH.DomainDB\obj\Debug\SYCH.DomainDB.pdb

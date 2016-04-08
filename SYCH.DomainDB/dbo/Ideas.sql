@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Ideas]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY,
+	[Description] NVARCHAR(255) NOT NULL, 
+    [Votes] INT NOT NULL, 
+    [Industry] NVARCHAR(50) NOT NULL
+)

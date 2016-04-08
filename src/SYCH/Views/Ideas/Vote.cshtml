@@ -1,0 +1,54 @@
+﻿@model SYCH.Models.Idea
+
+@{
+    ViewData["Title"] = "Vote";
+}
+
+<center>
+    <h1>Like the idea?</h1>
+    <div class="box1"></div>
+    
+    <h4>Vote for it!</h4>
+</center>
+
+    <form asp-action="Vote">
+        <div class="form-horizontal">
+            
+          
+            <div asp-validation-summary="ValidationSummary.ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ID" />
+            <div class="form-group">
+                <label asp-for="Description" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Description" class="form-control" readonly />
+                    <span asp-validation-for="Description" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Industry" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Industry" class="form-control" readonly />
+                    <span asp-validation-for="Industry" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Votes" class="col-md-2 control-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Votes" class="form-control" readonly />
+                    <span asp-validation-for="Votes" class="text-danger" />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Vote" class="btn btn-default" />
+                </div>
+            </div>
+            </div>
+</form>
+
+<center>
+    <p>
+        <a asp-action="Index">Back to List</a>
+    </p>
+
+</center>

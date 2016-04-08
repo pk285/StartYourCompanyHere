@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0C4D7BEC-C6F6-4EB4-A469-21C9A71DD452}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SYCH", "src\SYCH\SYCH.xproj", "{EAD5E02D-9037-4ADD-8E46-87F2834ED02C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EAD5E02D-9037-4ADD-8E46-87F2834ED02C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAD5E02D-9037-4ADD-8E46-87F2834ED02C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAD5E02D-9037-4ADD-8E46-87F2834ED02C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAD5E02D-9037-4ADD-8E46-87F2834ED02C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EAD5E02D-9037-4ADD-8E46-87F2834ED02C} = {0C4D7BEC-C6F6-4EB4-A469-21C9A71DD452}
+	EndGlobalSection
+EndGlobal
