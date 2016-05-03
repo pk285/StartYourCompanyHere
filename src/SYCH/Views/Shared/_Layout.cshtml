@@ -26,6 +26,7 @@
                     </button>
                     <a asp-controller="Home" asp-action="Index" class="navbar-brand">SYCH</a>
                 </div>
+                <!-- See if user is authenticated-->
 @if (User.Identity.IsAuthenticated)
 {
                 <div class="navbar-collapse collapse">
